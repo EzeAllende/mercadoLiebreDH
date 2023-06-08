@@ -9,6 +9,7 @@ body {
     margin:auto;
     
 }   
+/* HEADER*/
 header{
     background-color: #EAC926;
     padding: 15px;
@@ -92,7 +93,7 @@ header{
 .homebanner{
     width:100%;
 }
-
+/* CUERPOR/MAIN*/
 main { 
     width: 90%;
     background-color:#ebebeb;
@@ -174,7 +175,7 @@ color: #39b54a ;
 .descripcion{
     display: none;
 }
-
+/* FOOTER*/
 footer {
     background-color: white;
 }
@@ -260,7 +261,7 @@ footer {
     font-size: 12px;
 }
 }
-
+/*BREACKPOINTS*/
 @media (min-width: 1200px){
 .headerTop, .navBar {
         
@@ -322,4 +323,80 @@ footer {
     flex-direction: row;
     justify-content: space-around;
 }
+}
+/*REGISTRO DE USUARIO*/
+form {
+    width:100%;
+    max-width: 460px;
+    background-color: #ebebeb;
+    border: none;
+    box-sizing: border-box;
+    text-align: left;
+    display: block;
+    margin:auto;
+    padding: 15px;
+    font-size: 16px;
+    
+}
+.tituloRegistro{
+    text-align: left;
+    margin-bottom: 15px;
+    display: block;
+    
+    font-size: 24px;
+}
+.registroInput{
+    margin-bottom: 8px;
+    width: 100%;
+    
+
+}
+.a{
+    width: 100%;
+    border-radius: 6px;
+    padding: 5px;
+
+
+}
+.b {
+    margin-left: 5px;
+}
+.botonFormulario{
+    width: 25%;
+    background-color: #39b54a;
+    color:white;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+/*LOGIN*/
+.loginRegistro{
+    max-width: 460px;
+    width:100%;
+    background-color: #ebebeb;
+    margin-bottom: 20px;
+}
+.loginUsuario{
+    font-size: 16px;
+    border-radius: 6px;
+    border:none;
+    text-align: left;
+    padding: 15px;
+    display:block;
+    margin:auto;
+    width: 100%;
+}   
+.loginBotonUsuario{
+    font-size: 16px;
+    border-radius: 6px;
+    border:none;
+    text-align: center;
+    padding: 15px;
+    display:block;
+    margin:auto;
+    color:white;
+    background-color: #03264C;
+    width: 100%;
+    
 }

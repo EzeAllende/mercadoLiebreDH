@@ -8,6 +8,7 @@
     <link href = "/css/styles.css" rel = "stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/524c76814f.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header class="header-main">
@@ -36,8 +37,8 @@
                 </ul>
           
                  <ul class = "login">    
-                    <li><a href = '/registro'>Creá tu cuenta <i class="fa-regular fa-id-card"></i> </a></li>
-                    <li><a href = '/login'>Ingresá <i class="fa-solid fa-right-to-bracket"></i> </a></li>
+                    <li><a href = '/creaTuCuenta'>Creá tu cuenta <i class="fa-regular fa-id-card"></i> </a></li>
+                    <li><a href = '/ingresa'>Ingresá <i class="fa-solid fa-right-to-bracket"></i> </a></li>
                     <li><a href = '/misCompras'>Mis compras <i class="fa-sharp fa-solid fa-basket-shopping"></i> </a></li>
                 </ul>
         </nav>
@@ -47,73 +48,57 @@
         </button>
          <br>  
     </header>
-    <div><img class = "homebanner" src="/img/img-home-banner.jpg" alt = "homeBanner"></img> </div>
     
-    <main>
-        <h3 class="titulares" >Basado en tu última visita</h3>
-        <section class = "contenedor">
-            <article class="producto"> 
-                
-                <a href = "/producto/#macbook"> <img src = "/img/img-macbook-pro-2019.jpg" class="foto" alt = "MacBook Pro 2019"></img></a>
-                
-                <div class="cajaProducto">
-                    <p class="fa-solid fa-truck"></p>
-                    <div class="precioDescuento">
-                        <p class="precio">$230.000</p>
-                        <p class="descuento">20% Off</p>
-                    </div>
-                    <p class="descripcion">MacBook Pro 2019</p>
-                </div>
-            </article>
-            <article class ="producto">
-                
-                <a href = "/producto/#samsungGalaxyS10"> <img src = "/img/img-samsung-galaxy-s10.jpg" class="foto" alt = "Samsung Galaxy S10" class = "anchoProducto"></img></a>
-                    
-                <div class="cajaProducto">   
-                    <p class="fa-solid fa-truck"></p>
-                    <div class="precioDescuento">
-                        <p class="precio">$70.500</p>
-                        <p class="descuento">10% Off</p>
-                    </div>
-                    <p class="descripcion" >Samsung Galaxy S10</p>
-                </div>
-            </article>
-        </section>
-        
-        <h3 class="titulares">Ofertas</h3>
-        <section class = "contenedor" >
-           
-            <article class ="producto"> 
-                
-                <a href = "/producto/#cafeteraMolinex"> <img src = "/img/img-cafetera-moulinex.jpg" class="foto" alt = "Cafetera Moulinex"></img></a>
-                
-                <div class="cajaProducto">
-                    <p class="fa-solid fa-truck" ></p>
-                    <div class="precioDescuento">
-                        <p class="precio">$20.000</p>
-                        <p class="descuento">25% Off</p>
-                    </div>
-                    <p class="descripcion">Cafetera Moulinex</p>
+    <form action="/" method="POST">
+        <h2 class="tituloRegistro">Registro de usuario</h2>
+        <div class="registroInput">
+            <input type="text" name="NombreApellido" placeholder="Nombre y Apellido" class="a">
+            <span class="Caracter incorrecto"></span>
+        </div>
+        <div class="registroInput" >
+            <input type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="a">
+            <span class="Nombre no disponible"></span>
+        </div>
+        <div class="registroInput" >
+            <input type="email" name="email" placeholder="Email" class="a">
+            <span class="Correo no válido"></span>
+        </div>
+        <div class="registroInput" >
+            <h4>Fecha de Nacimiento</h4>
+            <input type="date" name="fechaNacimento" class="a">
+        </div>
+        <div class="registroInput">
+            <input  type="text" name="domicilio" placeholder="Domicilio" class="a">
 
-                </div>
-            </article>
-            <article class ="producto">
-                
-                <a href = "/producto/#samsungTvSmart"> <img src = "/img/img-tv-samsung-smart.jpg" class="foto" alt = "Samsung Smart TV"></img></a>
-                
-                <div class="cajaProducto">   
-                    <p class="fa-solid fa-truck"></p>
-                    <div class="precioDescuento">
-                        <p class="precio">$150.000</p>
-                        <p class="descuento">15% Off</p>
-                    </div>
-                    <p class="descripcion">Samsung Smart TV</p>
-                </div>
-            </article>
-        </section>
-        <br>
-
-    </main>
+        </div>
+        <div class="registroInput">
+            <h4>Perfil del usuario</h4>
+            <input type="radio" name="perfilUsuario" value="comprador" class="b"> Comprador</input>
+            <input type="radio" name="perfilUsuario" value="vendedor" class="b"> Vendedor</input>
+        </div>
+        <div class="registroInput">
+            <h4>Intereses</h4>
+            <input type="checkbox" name="intereses" value="electro" class="b"> Electro
+            <input type="checkbox" name="intereses" value="moda" class="b"> Moda
+            <input type="checkbox" name="intereses" value="hogar" class="b"> Hogar
+            <input type="checkbox" name="intereses" value="jugueteria" class="b"> Juguetería
+            <input type="checkbox" name="intereses" value="vidaSana" class="b"> Vida Sana
+        </div>
+        <div class="registroInput"> 
+            <h4>Adjunta una foto de perfil</h4>
+            <input type="file" name="fotoPerfil" class="a" accept=".jpg, .png">
+        </div>
+        <div class="registroInput">
+            <h4>Ingresa una contraseña</h4>
+            <input type="password" name="password" class="a">
+            <h4>Confirma la contraseña</h4>
+            <input type="password" name="password" class="a">
+        </div>
+        <div class="registroInput">
+            <button type="reset" name="aceptaFormulario" value="borrar" class="botonFormulario">Borrar</button>
+            <button type="submit" name="aceptaFormulario" value="guardar" class="botonFormulario">Guardar</button>
+        </div>
+    </form>
     <footer>
         <br>
         <div class="footer1200" >
@@ -138,5 +123,6 @@
         <div><label class = "copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</label></div>
         
     </footer>
+
 </body>
 </html>
